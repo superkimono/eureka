@@ -25,6 +25,12 @@ public class EurekaClient2Application {
         return info.getHomePageUrl() + info.isDirty();
     }
 
+    @GetMapping("/serviceinfo1")
+    public String service1() {
+        //InstanceInfo info = eurekaClient.getNextServerFromEureka("firstClient", false);
+        return "hello from second service";
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(EurekaClient2Application.class, args);
     }
